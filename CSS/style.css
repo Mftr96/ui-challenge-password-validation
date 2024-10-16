@@ -1,0 +1,21 @@
+
+
+
+
+body{
+    background-color: rgb(9, 51, 66);
+}
+
+.input-container{
+    width: 1000px;
+    margin: 0 auto;
+    border: 1px solid crimson;
+    background-color: white;
+    color: black;
+}
+
+h2{
+    text-align: center;
+    color: rgb(6, 48, 67);
+}
+
