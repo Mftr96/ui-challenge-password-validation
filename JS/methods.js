@@ -24,7 +24,6 @@ const methods = {
         * return boolean
         */
         const pswUpper = inputPsw => /\p{Lu}/u.test(inputPsw);
-        console.log(pswUpper);
         return pswUpper(inputPsw) === true ? true : false;
     },
 
