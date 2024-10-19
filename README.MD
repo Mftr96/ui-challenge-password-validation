@@ -89,3 +89,20 @@ function isPswSpecial(inputPsw) {
 
 }
 ```
+
+* milestone 3:eseguire il controllo in tempo reale e scatenare i cambiamenti al soddisfare delle condizioni 
+
+dopo aver scritto le funzioni che controllano le varie casistiche della password andiamo a mettere in ascolto l'input che al soddisfare dellecondizioni andrà a cambiare il colore delle scritte e cambierà l'icona 
+
+quindi gli eventi scatenati saranno:
+-cambio icona
+-cambio colore scritta 
+-aumento valore barra progress (che aumenterà del 25% per ogni condizione soddisfatta)
+
+per il cambio icona e scritta verrà usato un classList.remove e successivamente un add
+
+per il progress verrà assegnato il valore che aumenterà di volta in volta
+ha senso mettere il contatore nella funzione ?
+importante: quando la funzione soddisfa un requisito, il valore della barra progresso non deve continuare ad aumentare superati i 9 caratteri 
+
+io voglio avere un event listener che controlli l'input attraverso i metodi che ho e che alla prima volta che viene soddisfatta la condizione eseguo i cambiamenti, se la condizione viene continuamente soddisfatta non vengono ripetuti i cambiamenti 

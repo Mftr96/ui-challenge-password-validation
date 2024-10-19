@@ -20,33 +20,33 @@
 
 <body>
     <div class="input-container">
-        <h2>Verifica della password</h2>
+        <h2 class="text-center">Verifica della password</h2>
         <!-- INPUT PSW -->
         <div class="d-flex justify-content-center">
-            <input class="w-75 m-1" value="Ciao" type="password" name="" id="password">
+            <input class="w-75 m-1" value="" type="password" name="" id="password">
         </div>
         <!-- CHECKLIST PSW -->
         <div class="m-4">
             <div class="d-flex align-items-center border border-warning ">
                 <i class="fa-solid fa-x  me-1"></i>
-                <p class="m-0">almeno 9 caratteri</p>
+                <p id="ninechar" class="m-0">almeno 9 caratteri</p>
             </div>
             <div class="d-flex align-items-center border border-warning ">
                 <i class="fa-solid fa-x me-1"></i>
-                <p class="m-0">almeno una maiuscola</p>
+                <p id="uppercase" class="m-0">almeno una maiuscola</p>
             </div>
             <div class="d-flex align-items-center border border-warning ">
                 <i class="fa-solid fa-x me-1"></i>
-                <p class="m-0">almeno un numero </p>
+                <p id="number" class="m-0">almeno un numero </p>
             </div>
             <div class="d-flex align-items-center border border-warning ">
                 <i class="fa-solid fa-x me-1"></i>
-                <p class="m-0">almeno un carattere speciale </p>
+                <p id="special" class="m-0">almeno un carattere speciale </p>
             </div>
         </div>
         <!-- PROGRESS BAR PSW -->
         <div class="d-flex justify-content-center">
-            <progress class="w-75" id="progress-bar" value="50" max="100"></progress>
+            <progress class="w-75" id="progress-bar" value="" max="100"></progress>
         </div>
 
     </div>

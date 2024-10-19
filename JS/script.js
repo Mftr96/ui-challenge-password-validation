@@ -1,18 +1,20 @@
 import methods from "./methods.js";
-//saving psw input in variable
-let inputPsw = document.getElementById("password").value;
-//console.log(inputPsw)
-
-
-let pswControllata = methods.controlloSpeciale(inputPsw);
-console.log(pswControllata);
-
-
 
 document.getElementById("password").addEventListener("input", function() {
     let inputPsw = this.value;
-    console.log("Is password at least 9 characters?", methods.controlloNumeri(inputPsw));
-    console.log("Does password contain an uppercase letter?", methods.controlloMaiuscola(inputPsw));
-    console.log("Does password contain a number?", methods.controlloNumero(inputPsw));
-    console.log("Does password contain a special character?", methods.controlloSpeciale(inputPsw));
+    let ninechar=document.getElementById("ninechar");
+    let uppercase=document.getElementById("uppercase");
+    let number=document.getElementById("number");
+    let special=document.getElementById("special");
+    console.log(inputPsw);
+    if(methods.controlloLunghezza(inputPsw)=== true ){
+        if(!ninechar.classList.contains("green")){
+            document.getElementById("ninechar").classList.add("green");
+            document.getElementById("progress-bar").value+=25;
+            
+        } 
+    }
+    //finire di scrivere le altre condizioni su modello di qui sopra 
+  
+    
 });

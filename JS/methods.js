@@ -1,5 +1,5 @@
 const methods = {
-    controlloNumeri: function isPsw9Char(inputPsw) {
+    controlloLunghezza: function isPsw9Char(inputPsw) {
         //controlling if argument is string and not a number
         if (typeof inputPsw.length === "string") {
             return "questo valore non è un numero, riprova con un numero"
