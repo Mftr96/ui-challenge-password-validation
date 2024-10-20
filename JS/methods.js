@@ -19,7 +19,7 @@ const methods = {
         /*about regular expression:
         * \p{lu}=Unicode property that is equal to every uppercase letters
         * /u =unicode flag, permetting to regex to handel all unicode characters.
-        *  about .test :
+        * about .test :
         * test is a method  that find corrispondence between argument and regex
         * return boolean
         */
