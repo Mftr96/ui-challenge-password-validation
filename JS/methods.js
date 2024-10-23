@@ -1,5 +1,5 @@
 const methods = {
-    controlloLunghezza: function isPsw9Char(inputPsw) {
+    isPsw9Char: inputPsw => {
         //controlling if argument is string and not a number
         if (typeof inputPsw.length === "string") {
             return "questo valore non è un numero, riprova con un numero"
@@ -15,7 +15,7 @@ const methods = {
 
         return false;
     },
-    controlloMaiuscola: function isPswUpperCase(inputPsw) {
+    isPswUpperCase: inputPsw => {
         /*about regular expression:
         * \p{lu}=Unicode property that is equal to every uppercase letters
         * /u =unicode flag, permetting to regex to handel all unicode characters.
@@ -24,25 +24,26 @@ const methods = {
         * return boolean
         */
         const pswUpper = inputPsw => /\p{Lu}/u.test(inputPsw);
-        return pswUpper(inputPsw) === true ? true : false;
+        return pswUpper(inputPsw);
     },
 
-    controlloNumero:function isPswNumber(inputPsw) {
+    isPswNumber: inputPsw => {
         const pswNumber = inputPsw => /[0-9]/u.test(inputPsw);
-        return pswNumber(inputPsw) === true ? true : false;
-    
+        return pswNumber(inputPsw);
+
     },
 
-    controlloSpeciale:function isPswSpecial(inputPsw) {
+    isPswSpecial: inputPsw => {
         /**
          * 
          *\W is used to control if there's a non-word character
          *(underscore _ excluded)
          */
         const pswSpecial = inputPsw => /\W/u.test(inputPsw);
-        return pswSpecial(inputPsw) === true ? true : false;
-    
+        return pswSpecial(inputPsw);
+
     },
 };
+//scrivere con arrow 
 
 export default methods;

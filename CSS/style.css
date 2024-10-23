@@ -5,7 +5,7 @@ body{
 .input-container{
     width: 1000px;
     margin: 0 auto;
-    border: 1px solid crimson;
+    /* border: 1px solid crimson; */
     background-color: white;
     color: black;
 }

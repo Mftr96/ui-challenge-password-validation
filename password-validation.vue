@@ -1,6 +1,5 @@
-import methods from "./methods.js";
-
-document.getElementById("password").addEventListener("input",() => {
+<script>
+let controlloPsw= () => {
     let inputPsw = this.value;
     let ninechar = document.getElementById("ninechar");
     let uppercase = document.getElementById("uppercase");
@@ -47,9 +46,44 @@ document.getElementById("password").addEventListener("input",() => {
         special.classList.remove("green");
         document.getElementById("progress-bar").value -= 25;
     }
-    //finire di scrivere le altre condizioni su modello di qui sopra 
-    // vedere se prendere per classe o per id le icone per cambiare di classe 
-    // mettere il nome delle funzioni in methods nella key e lasciare le function anonime 
+};
+</script>
 
 
-});
+
+<template>
+    <div class="input-container">
+        <h2 class="text-center">Verifica della password</h2>
+        <!-- INPUT PSW -->
+        <div class="d-flex justify-content-center">
+            <input @input="controlloPsw" class="w-75 m-1" value="" type="password" name="" id="password">
+        </div>
+        <!-- CHECKLIST PSW -->
+        <div class="m-4">
+            <div id="ninechar" class="d-flex align-items-center  ">
+                <i class="fa-solid fa-x  me-1"></i>
+                <p class="m-0">almeno 9 caratteri</p>
+            </div>
+            <div id="uppercase" class="d-flex align-items-center  ">
+                <i class="fa-solid fa-x me-1"></i>
+                <p class="m-0">almeno una maiuscola</p>
+            </div>
+            <div id="number" class="d-flex align-items-center  ">
+                <i class="fa-solid fa-x me-1"></i>
+                <p class="m-0">almeno un numero </p>
+            </div>
+            <div id="special" class="d-flex align-items-center  ">
+                <i class="fa-solid fa-x me-1"></i>
+                <p class="m-0">almeno un carattere speciale </p>
+            </div>
+        </div>
+        <!-- PROGRESS BAR PSW -->
+        <div class="d-flex justify-content-center">
+            <progress class="w-75" id="progress-bar" value="" max="100"></progress>
+        </div>
+
+    </div>
+</template>
+
+
+<style scoped></style>
